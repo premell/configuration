@@ -1,0 +1,1 @@
+install vim, harpoon kenji, error lens, comment anchors

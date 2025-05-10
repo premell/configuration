@@ -1,0 +1,497 @@
+
+// this is the main config file settings.json. There is also a keybindings.json
+// list of commands: https://gist.github.com/skfarhat/4e88ef386c93b9dceb98121d9457edbf
+{
+	"telemetry.telemetryLevel": "off",
+	// General settings
+	"problems.filters": {
+		"filterErrorsOnly": true
+	},
+	"window.openFoldersInNewWindow": "on",
+	"workbench.editor.revealIfOpen": true,
+	"editor.lineNumbers": "on",
+	"editor.scrollBeyondLastLine": false,
+	"editor.smoothScrolling": false,
+	"editor.inlineSuggest.enabled": true,
+	"editor.find.cursorMoveOnType": true,
+	"editor.formatOnSave": false,
+	"editor.minimap.enabled": true,
+	"editor.snippetSuggestions": "top",
+	"editor.wordWrap": "off",
+	"editor.renderWhitespace": "none",
+	"editor.renderLineHighlight": "line",
+	"editor.cursorBlinking": "solid",
+	"editor.insertSpaces": true,
+	"editor.tabSize": 4,
+	"editor.matchBrackets": "always",
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true,
+	// Search settings
+	"search.smartCase": true,
+	"search.useIgnoreFiles": true,
+	"search.useGlobalIgnoreFiles": true,
+	// Terminal settings
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	// File explorer settings
+	"explorer.confirmDelete": true,
+	"explorer.confirmDragAndDrop": true,
+	"explorer.autoReveal": true,
+	// Vim settings (for VSCodeVim extension)
+	"vim.leader": " ",
+	"vim.hlsearch": true,
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.smartcase": true,
+	"vim.ignorecase": true,
+	"vim.joinspaces": false,
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.duration": 200,
+	"vim.highlightedyank.color": "rgba(160, 160, 160, 155)",
+	"vim.enableNeovim": false,
+	"vim.handleKeys": {
+		"<C-f>": false,
+		"<C-w>": false
+	},
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"ö",
+				"e"
+			],
+			"commands": [
+				"editor.action.marker.nextInFiles",
+			]
+		},
+		{
+			"before": [
+				"ö",
+				"E"
+			],
+			"commands": [
+				"editor.action.marker.prevInFiles",
+			]
+		},
+		{
+			"before": [
+				"ö",
+				"c"
+			],
+			"commands": [
+				"workbench.action.navigateToLastEditLocation",
+			]
+		},
+
+		{
+			"before": [
+				"<leader>",
+				"l",
+				"a"
+			],
+			"command": "editor.action.codeAction",
+		},
+		{
+			"before": [
+				"<Esc>"
+			],
+			"commands": [
+				":nohl"
+			]
+		},
+		{
+			"before": [
+				"g",
+				"b"
+			],
+			"after": [
+				"[",
+				"b"
+			]
+		},
+		{
+			"before": [
+				"g",
+				"w"
+			],
+			"after": [
+				"]",
+				"w"
+			]
+		},
+		{
+			"before": [
+				"J"
+			],
+			"commands": [
+				"workbench.action.previousEditor"
+			]
+		},
+		{
+			"before": [
+				"K"
+			],
+			"commands": [
+				"workbench.action.nextEditor"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"l",
+				"f"
+			],
+			"commands": [
+				"editor.action.formatDocument"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"f"
+			],
+			"commands": [
+				"workbench.action.quickOpen"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"c"
+			],
+			"commands": [
+				"workbench.action.showAllSymbols"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"t"
+			],
+			"commands": [
+				"workbench.action.findInFiles"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"s",
+				"r"
+			],
+			"commands": [
+				"workbench.action.replaceInFiles"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"b",
+				"e"
+			],
+			"commands": [
+				"workbench.action.closeOtherEditors"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"l",
+				"r"
+			],
+			"commands": [
+				"editor.action.rename"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"e"
+			],
+			"commands": [
+				"workbench.action.toggleSidebarVisibility"
+			]
+		},
+		{
+			"before": [
+				"g",
+				"i"
+			],
+			"commands": [
+				"editor.action.goToImplementation"
+			]
+		},
+		{
+			"before": [
+				"Y"
+			],
+			"after": [
+				"y",
+				"$"
+			]
+		},
+		{
+			"before": [
+				"y",
+				"y"
+			],
+			"after": [
+				"Y"
+			]
+		},
+		{
+			"before": [
+				"V"
+			],
+			"after": [
+				"v",
+				"$"
+			]
+		},
+		{
+			"before": [
+				"v",
+				"v"
+			],
+			"after": [
+				"V"
+			]
+		},
+		{
+			"before": [
+				"Q"
+			],
+			"after": [
+				"@",
+				"@"
+			]
+		},
+		{
+			"before": [
+				"<C-o>"
+			],
+			"commands": [
+				"workbench.action.navigateBack"
+			]
+		},
+		{
+			"before": [
+				"<C-i>"
+			],
+			"commands": [
+				"workbench.action.navigateForward"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"a"
+			],
+			"commands": [
+				"harpoon.add"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"o"
+			],
+			"commands": [
+				"harpoon.show"
+			]
+		},
+		// splitting windows
+		{
+			"before": [
+				"<leader>",
+				"v"
+			],
+			"commands": [
+				"workbench.action.splitEditor"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"x"
+			],
+			"commands": [
+				"workbench.action.closeEditorsInGroup"
+			]
+		},
+		// C project build and run
+		{
+			"before": [
+				"<leader>",
+				"c",
+				"b"
+			],
+			"commands": [
+				"workbench.action.tasks.build_cpp"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"c",
+				"r"
+			],
+			"commands": [
+				"workbench.action.tasks.test"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"c",
+				"c"
+			],
+			"commands": [
+				"workbench.action.tasks.runTask",
+				{
+					"args": "Clean Project"
+				}
+			]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<"
+			],
+			"commands": [
+				"editor.action.outdentLines"
+			]
+		},
+		{
+			"before": [
+				">"
+			],
+			"commands": [
+				"editor.action.indentLines"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"c"
+			],
+			"commands": [
+				"editor.action.blockComment"
+			]
+		},
+		{
+			"before": [
+				"p"
+			],
+			"after": [
+				"\"",
+				"_",
+				"d",
+				"P"
+			]
+		},
+		{
+			"before": [
+				"y",
+				"y"
+			],
+			"after": [
+				"Y"
+			]
+		},
+		{
+			"before": [
+				"V"
+			],
+			"after": [
+				"v",
+				"$"
+			]
+		},
+		{
+			"before": [
+				"v",
+				"v"
+			],
+			"after": [
+				"V"
+			]
+		},
+	],
+	// Adding panel navigation shortcuts
+	"keybindings": [
+		{
+			"key": "ctrl+shift+h",
+			"command": "workbench.action.navigateLeft"
+		},
+		{
+			"key": "ctrl+shift+l",
+			"command": "workbench.action.navigateRight"
+		},
+		{
+			"key": "ctrl+shift+k",
+			"command": "workbench.action.navigateUp"
+		},
+		{
+			"key": "ctrl+shift+j",
+			"command": "workbench.action.navigateDown"
+		}
+	],
+	"tasks": {
+		"version": "1.0.0",
+		"windows": {
+			"options": {
+				"shell": {
+					"executable": "cmd.exe",
+					"args": [
+						"/C",
+						// The path to VsDevCmd.bat depends on the version of Visual Studio you have installed.
+						"\"C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat\"",
+						"-arch=x64",
+						"&&"
+					]
+				}
+			}
+		},
+		"tasks": [
+			{
+				"label": "Build C/C++ Project (Debug)",
+				"type": "shell",
+				//"command": "where cl",
+				"command": "cl /Zi /EHsc /Fe:bin\\${fileBasenameNoExtension}_debug.exe /Fo:bin\\ /Fd:bin\\ ${file}",
+				"group": {
+					"kind": "build_cpp",
+					"isDefault": true
+				},
+				"problemMatcher": [
+					"$msCompile"
+				],
+				"presentation": {
+					"reveal": "always"
+				},
+				"detail": "Build with MSVC cl compiler in debug mode (/Zi)"
+			},
+		]
+	},
+	"workbench.colorTheme": "Gruvbox Dark Hard",
+	"security.workspace.trust.untrustedFiles": "open",
+	"markdown-preview-enhanced.previewTheme": "atom-dark.css",
+	"multiCommand.commands": [
+		{
+			"command": "multiCommand.jumpNextErrorClean",
+			"sequence": [
+				"editor.action.marker.nextInFiles",
+				{
+					"command": "cursorMove",
+					"args": {
+						"to": "right",
+						"by": "character",
+						"value": 1
+					}
+				}
+			]
+		}
+	]
+}

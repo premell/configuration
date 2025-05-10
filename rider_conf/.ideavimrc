@@ -1,0 +1,188 @@
+
+" TODO ideas:
+" toggle terminal with ctrl t
+" open file explorer
+" öa for navigation bar är inte så bra som jag trodde. egentligen vill jag ha se alla functions och klasser i den här filen
+" maybe bookmarks can be good? They look extremely interesting. They kinda look like a permanent quickfixList: https://www.youtube.com/watch?v=2PG03drOEMk
+
+" set some key for joining lines. its pretty cool with ideajoin. you can join nested if statements and similar
+set ideajoin
+
+set hlsearch
+noremap <Esc> :nohlsearch<CR>
+
+" gw and gb to jump to subwords. Väldigt coolt, börja använda!
+map gb [b
+map gw ]w
+
+
+let mapleader=" "
+
+set ignorecase smartcase
+
+"set timeout = 0
+"set scrolloff = 3
+
+
+map <C-F> <Action>(Find)
+"map <C-R> <Action>(Replace)
+
+
+""" Plugins  --------------------------------
+" Trying the new syntax
+" Plug 'machakann/vim-highlightedyank'
+" Plug 'tpope/vim-commentary'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = "200"
+let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)" 
+
+set mini-ai
+
+
+Plug 'preservim/nerdtree'
+set NERDTree 
+
+"Plug 'terryma/vim-multiple-cursors'
+"set
+"nmap <S-C-n> <Plug>AllWholeOccurrences
+"xmap <S-C-n> <Plug>AllWhoceOccurrences
+"nmap g<S-C-n> <Plug>AllOccurrences
+"xmap g<S-C-n> <Plug>AllOccurrences
+
+" This plugin is not working
+"Plug 'easymotion/vim-easymotion'
+"set easymotion
+"map s <Plug>(easymotion-s)
+
+""" Common settings -------------------------
+set showmode
+set so=6
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+
+"inoremap jk <ESC>
+"inoremap kj <ESC>
+
+" Switch between nerdtree and editor
+map <c-h>   :NERDTree<CR>
+map <c-l>   :action FocusEditor<CR>
+
+" go to the left split
+map <leader>we <Action>(SplitVertically)
+map <leader>ww <Action>(NextSplitter)
+nmap <C-W> :action CloseEditor<CR>
+
+" Switch tabs
+map J gT
+map K gt
+
+" Use system clipboard
+set clipboard+=unnamed,unnamedplus
+
+" Goto Implementation
+"nmap gi :action GotoImplementation<CR>
+
+" Replace without yank
+vnoremap p "_dP
+
+" Toggle case and start typing. E.g. <leader>iget: property -> getProperty
+" map <leader>i ~hi
+" Remove selection and toggle case. E.g. v2l<leader>u: getProperty -> property
+" vmap <leader>u d~h
+" I think it's a better solution
+"map U <C-R>
+
+""" Strict mode for development ---------------
+"set ideastrictmode
+""@premell
+
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
+
+
+
+"Harpoon
+
+"nmap <A-h> :action Show Harpoon Window<CR>
+
+
+
+"//nmap <leader>st :action Find in Files<CR>
+
+
+"Random
+
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+set idearefactormode=keep
+vnoremap < <gv
+vnoremap > >gv
+nnoremap <leader>c :action CommentByBlockComment<CR>
+vnoremap <leader>c :action CommentByBlockComment<CR>
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Leader>lf :action ReformatCode<CR>
+nnoremap <leader>sr :action RecentFiles<CR>
+nnoremap <leader>lr :action RenameElement<CR>
+
+
+
+"nnoremap gp  :action ReformatCode<CR>
+nnoremap gi :action GotoImplementation<CR>
+
+"nnoremap ge :action GotoNextError<CR>
+"nnoremap gE :action GotoPreviousError<CR>
+nnoremap <leader>sf :action GotoFile<CR>
+nnoremap <leader>sc :action GotoClass<CR>
+nnoremap <leader>sf :action GotoFile<CR>
+nnoremap <leader>st :action FindInPath<CR>
+nnoremap <leader>sr :action ReplaceInPath<CR>
+
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>e :action ExpandTreeNode<CR>
+nnoremap <leader>r :action IdeaVim.ReloadVimRc.reload<CR>
+
+nnoremap <leader>be :action CloseAllEditorsButActive<CR>
+
+
+nnoremap  öe :action GotoNextError<CR>
+nnoremap  öE :action GotoPreviousError<CR>
+nnoremap  öf :action MethodDown<CR>
+nnoremap  öF :action MethodUp<CR>
+nnoremap  öq :action NextOccurence<CR>
+nnoremap  öQ :action PreviousOccurence<CR>
+nnoremap  öa :action ShowNavBar<CR>
+nnoremap  öc :action JumpToLastChange<CR>
+nnoremap  öC :action RecentLocations<CR>
+nnoremap  öö ]]
+nnoremap  öÖ [[
+
+
+nnoremap  Y y$
+nnoremap  yy Y
+nnoremap  V v$
+nnoremap  vv V
+
+nnoremap Q @@
+
+vnoremap  yy Y
+vnoremap V v$ 
+vnoremap  vv V
+
+"map <leader>xq <Action>(ActivateFindToolWindow)
+
+"set visualbell
+"set noerrorbells
+
+
+"HARPOON IS WORKING EXACTLY AS INTENDED!
+map <leader>hh :action TridentAppend<CR>
+map <leader>hf :action TridentList<CR>
+
+map <C-S-h> <Action>(TridentSelect1)
+map <C-S-j> <Action>(TridentSelect2)
+map <C-S-k> <Action>(TridentSelect3)
+map <C-S-l> <Action>(TridentSelect4)

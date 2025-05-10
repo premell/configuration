@@ -1,0 +1,116 @@
+[
+  {
+    "key": "alt+n",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "escape",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "removeSecondaryCursors",
+        "extension.vim_escape"
+      ]
+    },
+    "when": "editorTextFocus && editorHasMultipleSelections "
+  },
+  {
+    "key": "escape",
+    "command": "closeMarkersNavigation",
+    "when": "editorFocus && markersNavigationVisible"
+  }, // Toggle between file explorer and editor
+  {
+    "key": "escape",
+    "command": "closeMarkersNavigation",
+    "when": "editorFocus && markersNavigationVisible"
+  }, // Toggle between file explorer and editor
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "explorerViewletVisible"
+  },
+  // Close editor
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+/*   // Navigate methods
+  {
+    "key": "ö f",
+    "command": "editor.action.goToNextFunction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ö shift+f",
+    "command": "editor.action.goToPrevFunction",
+    "when": "editorTextFocus"
+  },
+  // Jump to next/previous occurrence
+  {
+    "key": "ö q",
+    "command": "editor.action.goToNextSymbolFromResult",
+    "when": "hasSymbols"
+  },
+  {
+    "key": "ö shift+q",
+    "command": "editor.action.goToPreviousSymbolFromResult",
+    "when": "hasSymbols"
+  },
+  // Show navigation bar
+  {
+    "key": "ö a",
+    "command": "workbench.action.gotoSymbol",
+    "when": "editorTextFocus"
+  }, */
+  // Jump to last change
+/*   {
+    "key": "ö c",
+    "command": "workbench.action.navigateToLastEditLocation",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ö shift+c",
+    "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup",
+    "when": "editorTextFocus"
+  }, */
+  // Harpoon-like navigation
+  {
+    "key": "ctrl+h",
+    "command": "harpoon.yoink",
+    "args": [
+      0
+    ]
+  },
+  {
+    "key": "ctrl+j",
+    "command": "harpoon.yoink",
+    "args": [
+      1
+    ]
+  },
+  {
+    "key": "ctrl+k",
+    "command": "harpoon.yoink",
+    "args": [
+      2
+    ]
+  },
+  {
+    "key": "ctrl+l",
+    "command": "harpoon.yoink",
+    "args": [
+      3
+    ]
+  },
+  // Toggle terminal
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  }
+]
